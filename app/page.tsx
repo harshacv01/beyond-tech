@@ -10,6 +10,7 @@ import FAQ from "@/components/faq";
 import Footer from "@/components/footer";
 import Projects from "@/components/projects";
 import ContactUs from "@/components/contact-us";
+import FloatingActionButton from "@/components/floating-action-button";
 
 export default function LandingPage() {
   return (
@@ -24,6 +25,7 @@ export default function LandingPage() {
         <Testimonials />
         <FAQ />
         <ContactUs />
+        <FloatingActionButton />
       </main>
       <Footer />
     </div>

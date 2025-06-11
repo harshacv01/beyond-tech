@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -8,10 +9,26 @@ const Footer = () => {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center gap-2 font-bold">
-              <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
+              {/* <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
                 S
-              </div>
-              <span>SaaSify</span>
+              </div> */}
+              {/* <span>SaaSify</span> */}
+
+              <Image
+                src="/bt-logo-light.png"
+                alt="BeyondTech Logo Light"
+                width={100}
+                height={100}
+                className="object-cover block dark:hidden h-[1.25rem]"
+              />
+
+              <Image
+                src="/bt-logo-dark.png"
+                alt="BeyondTech Logo Dark"
+                width={100}
+                height={100}
+                className="object-cover hidden dark:block h-[1.25rem]"
+              />
             </div>
             <p className="text-sm text-muted-foreground">
               Streamline your workflow with our all-in-one SaaS platform. Boost
@@ -196,7 +213,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-8">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} SaaSify. All rights reserved.
+            &copy; {new Date().getFullYear()} Beyond Tech. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link

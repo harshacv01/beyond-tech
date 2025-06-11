@@ -67,16 +67,22 @@ const Header = () => {
             Features
           </Link>
           <Link
+            href="#projects"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Projects
+          </Link>
+          <Link
             href="#testimonials"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             Testimonials
           </Link>
           <Link
-            href="#pricing"
+            href="#contact-us"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Pricing
+            Contact Us
           </Link>
           <Link
             href="#faq"
@@ -106,7 +112,13 @@ const Header = () => {
             Log in
           </Link> */}
           <Button className="rounded-full">
-            Lets Talk
+            <Link
+              href="#contact-us"
+              className="text-sm font-medium text-white transition-colors"
+            >
+              Lets Talk
+            </Link>
+
             {/* <ChevronRight className="ml-1 size-4" /> */}
           </Button>
         </div>
@@ -154,6 +166,13 @@ const Header = () => {
               Features
             </Link>
             <Link
+              href="#projects"
+              className="py-2 text-sm font-medium"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Projects
+            </Link>
+            <Link
               href="#testimonials"
               className="py-2 text-sm font-medium"
               onClick={() => setMobileMenuOpen(false)}
@@ -161,11 +180,11 @@ const Header = () => {
               Testimonials
             </Link>
             <Link
-              href="#pricing"
+              href="#contact-us"
               className="py-2 text-sm font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Pricing
+              Contact Us
             </Link>
             <Link
               href="#faq"
@@ -175,16 +194,16 @@ const Header = () => {
               FAQ
             </Link>
             <div className="flex flex-col gap-2 pt-2 border-t">
-              <Link
+              {/* <Link
                 href="#"
                 className="py-2 text-sm font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Log in
-              </Link>
+              </Link> */}
               <Button className="rounded-full">
-                Get Started
-                <ChevronRight className="ml-1 size-4" />
+                Lets Talk
+                {/* <ChevronRight className="ml-1 size-4" /> */}
               </Button>
             </div>
           </div>
