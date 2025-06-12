@@ -4,4 +4,5 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - NODE_ENV=production
+      EMAIL_USER: beyondtechglobal@gmail.com
+      EMAIL_PASS: pmwdopouhaakwmga
