@@ -1,16 +1,14 @@
 import { cn } from "@/lib/utils";
 import {
   IconAdjustmentsBolt,
-  IconCloud,
   IconCurrencyDollar,
-  IconEaseInOut,
-  IconHeart,
-  IconHelp,
-  IconRouteAltLeft,
-  IconTerminal2,
+  IconCode,
+  IconRobot,
+  IconBook,
+  IconBriefcase,
+  IconTools,
+  IconClock,
 } from "@tabler/icons-react";
-
-
 
 export function FeatureTiles() {
   const features = [
@@ -18,46 +16,46 @@ export function FeatureTiles() {
       title: "Full-Stack Software Development",
       description:
         "Web apps, mobile apps, systems — custom-built by developers who get startups and scalability. We write clean code, optimize pages, and boost search engine visibility with SEO optimization.",
-      icon: <IconTerminal2 />,
+      icon: <IconCode />,
     },
     {
       title: "AI Agent Creation",
       description:
         "We create intelligent AI solutions tailored to your workflows — from chatbots to autonomous tools.",
-      icon: <IconEaseInOut />,
+      icon: <IconRobot />,
     },
     {
       title: "Assignment & Academic Help",
       description:
         "Whether it's a tough code lab or a full research paper, we help you get it done (and understand it too).",
-      icon: <IconCurrencyDollar />,
+      icon: <IconBook />,
     },
     {
       title: "Job Support & Task Help",
       description: "Stuck on a job task or freelance gig? We’ll step in and get it done — with explanations if needed.",
-      icon: <IconCloud />,
+      icon: <IconBriefcase />,
     },
     {
       title: "Tech Services Galore",
       description: "Debugging, consulting, deployments, APIs, automation, tech stack migration — we’re your on-call tech partner.",
-      icon: <IconRouteAltLeft />,
+      icon: <IconTools />,
     },
     {
       title: "Always-On Support",
       description:
         "We are available a 100% of the time. Atleast our AI Agents are.",
-      icon: <IconHelp />,
+      icon: <IconClock />,
     },
     {
       title: "Premium work, friendly pricing.",
       description:
         "Transparent rates, no hidden fees — plus discounts for bulk services or ongoing partnerships.",
-      icon: <IconAdjustmentsBolt />,
+      icon: <IconCurrencyDollar />,
     },
     {
       title: "The Everything Else Dept.",
       description: "We take on special requests too — just ask. You dream it, we’ll scope it.",
-      icon: <IconHeart />,
+      icon: <IconAdjustmentsBolt />,
     },
   ];
   return (
