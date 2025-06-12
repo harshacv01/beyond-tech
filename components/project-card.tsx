@@ -1,74 +1,83 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export function ProjectCard({ project }: any) {
   return (
-    <>
-      <Card className="overflow-hidden bg-gradient-to-b from-background to-muted/10 backdrop-blur transition-all hover:shadow-md h-full flex flex-col ">
-        <div className="relative h-48 w-full overflow-hidden">
-          <Image
-            src={project.imageUrl || "/placeholder.svg"}
-            alt={project.title}
-            fill
-            className="object-cover transition-transform duration-300 hover:scale-105"
-          />
+    <div className="w-full rounded-2xl shadow-lg overflow-hidden flex flex-col">
+      {/* Image */}
+      <div className="relative h-80 w-full">
+        <Image
+          src={project.imageUrl || "/placeholder.svg"}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-500 hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
+
+      {/* Content below the image */}
+      <div className="p-6 flex flex-col gap-3">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          {project.title}
+        </h3>
+        <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-3">
+          {project.description}
+        </p>
+
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map((tech: string, index: number) => (
+            <Badge
+              key={index}
+              variant="secondary"
+              className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border-none rounded-full text-xs px-2 py-0.5"
+            >
+              {tech}
+            </Badge>
+          ))}
         </div>
-        <CardContent className="flex flex-col flex-grow p-6">
-          <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-          <p className="text-muted-foreground mb-4 flex-grow">
-            {project.description}
-          </p>
 
-          <div className="flex flex-wrap gap-2 mb-4">
-            {project.technologies.map((tech: any, index: any) => (
-              <Badge key={index} variant="secondary" className="rounded-full">
-                {tech}
-              </Badge>
-            ))}
-          </div>
-
-          <div className="flex gap-3 mt-auto">
-            {project.demoUrl && (
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
-                className="rounded-full"
+        <div className="flex gap-3 mt-2">
+          {project.demoUrl && (
+            <Button
+              variant="ghost"
+              size="sm"
+              asChild
+              className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full"
+            >
+              <Link
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-900 dark:text-white"
               >
-                <Link
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Live Demo
-                </Link>
-              </Button>
-            )}
-            {project.repoUrl && (
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
-                className="rounded-full"
+                <ExternalLink className="mr-1 h-4 w-4" />
+                Live Demo
+              </Link>
+            </Button>
+          )}
+          {project.repoUrl && (
+            <Button
+              variant="ghost"
+              size="sm"
+              asChild
+              className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full"
+            >
+              <Link
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-900 dark:text-white"
               >
-                <Link
-                  href={project.repoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </Link>
-              </Button>
-            )}
-          </div>
-        </CardContent>
-      </Card>
-    </>
+                <Github className="mr-1 h-4 w-4" />
+                Code
+              </Link>
+            </Button>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
