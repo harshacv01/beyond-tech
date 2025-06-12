@@ -21,11 +21,10 @@ const HowItWorks = () => {
             How It Works
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Simple Process, Powerful Results
+            Straightforward Process, No Surprises!
           </h2>
           <p className="max-w-[800px] text-muted-foreground md:text-lg">
-            Get started in minutes and see the difference our platform can make
-            for your business.
+           Get started in 3 easy steps — no fluff, just results.
           </p>
         </motion.div>
 
@@ -35,21 +34,21 @@ const HowItWorks = () => {
           {[
             {
               step: "01",
-              title: "Create Account",
+              title: "Check Fit",
               description:
-                "Sign up in seconds with just your email. No credit card required to get started.",
+                "Browse our services or just message us — we're happy to tell you if it's in our scope. Most things are!",
             },
             {
               step: "02",
-              title: "Configure Workspace",
+              title: "Share Requirements & Get a Free Demo",
               description:
-                "Customize your workspace to match your team's unique workflow and requirements.",
+                "We’ll build and show you a working demo based on your needs — no generic samples, just a real preview of what we’ll deliver.",
             },
             {
               step: "03",
-              title: "Boost Productivity",
+              title: "Confirm & Go Live",
               description:
-                "Start using our powerful features to streamline processes and achieve your goals.",
+                "No pressure, no hidden fees. Just clarity, collaboration, and clean delivery.",
             },
           ].map((step, i) => (
             <motion.div

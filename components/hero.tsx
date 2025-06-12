@@ -21,23 +21,21 @@ const Hero = () => {
             className="mb-4 rounded-full px-4 py-1.5 text-sm font-medium"
             variant="secondary"
           >
-            Startup Software Company
+            Empowering Visionaries through Intelligent Software
           </Badge>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
             Where Ideas Evolve Into{" "}
-            <ContainerTextFlip words={["better", "modern", "awesome"]} />{" "}
+            <ContainerTextFlip words={["better", "smarter", "faster", "modern", "bold", "powerful", "scalable", "creative"]} />{" "}
             Innovation
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            BeyondTech empowers modern startups with scalable, intelligent
-            software solutions. From collaboration to automation, we help your
-            team focus on building, shipping, and growing — faster.
+            BeyondTech delivers cutting-edge software solutions tailored for modern businesses. From seamless automation to collaborative tools, we help your team accelerate product development, streamline operations, and grow with confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="rounded-full h-12 px-8 text-base">
-              Start Explore
+             🚀 Start Exploring 
               <ArrowRight className="ml-2 size-4" />
             </Button>
             <Button
@@ -45,7 +43,7 @@ const Hero = () => {
               variant="outline"
               className="rounded-full h-12 px-8 text-base"
             >
-              Book a Demo
+             📅 Book a Demo 
             </Button>
           </div>
           <div className="flex items-center justify-center gap-4 mt-6 text-sm text-muted-foreground">
@@ -55,7 +53,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-1">
               <Check className="size-4 text-primary" />
-              <span>Secure, scalable architecture</span>
+              <span>Secure, scalable cloud architecture</span>
             </div>
             <div className="flex items-center gap-1">
               <Check className="size-4 text-primary" />

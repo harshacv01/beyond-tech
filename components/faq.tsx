@@ -37,35 +37,45 @@ const FAQ = () => {
           <Accordion type="single" collapsible className="w-full">
             {[
               {
-                question: "How does the 14-day free trial work?",
+                question: "What kind of services do you offer?",
                 answer:
-                  "Our 14-day free trial gives you full access to all features of your selected plan. No credit card is required to sign up, and you can cancel at any time during the trial period with no obligation.",
+                  "We build custom digital solutions tailored to your business — from full-stack web apps, internal tools, and workflow automations to SEO optimization and content writing. Whether it's boosting your visibility or powering your operations, we’ve got you covered.",
               },
               {
-                question: "Can I change plans later?",
+                question: "How do I know if you're the right fit?",
                 answer:
-                  "Yes, you can upgrade or downgrade your plan at any time. If you upgrade, the new pricing will be prorated for the remainder of your billing cycle. If you downgrade, the new pricing will take effect at the start of your next billing cycle.",
+                  "Just reach out. We’ll quickly let you know if what you need aligns with what we do — no fluff, no waiting. If we’re not the right fit, we’ll point you in the right direction.",
               },
               {
-                question: "Is there a limit to how many users I can add?",
+                question: "Is the demo really free?",
                 answer:
-                  "The number of users depends on your plan. The Starter plan allows up to 5 team members, the Professional plan allows up to 20, and the Enterprise plan has no limit on team members.",
+                  "Yes! Once we understand your initial requirements, we’ll build and show you a working demo — tailored to your use case, with no cost or obligation.",
               },
               {
                 question:
-                  "Do you offer discounts for nonprofits or educational institutions?",
+                  "What do you need from me to get started?",
                 answer:
-                  "Yes, we offer special pricing for nonprofits, educational institutions, and open-source projects. Please contact our sales team for more information.",
+                  "Just a rough idea of what you need. We’ll ask the right questions, fill in the blanks, and suggest improvements where needed.",
               },
               {
-                question: "How secure is my data?",
+                question: "What happens after the demo?",
                 answer:
-                  "We take security very seriously. All data is encrypted both in transit and at rest. We use industry-standard security practices and regularly undergo security audits. Our platform is compliant with GDPR, CCPA, and other relevant regulations.",
+                  "If the solution and pricing work for you, we move straight into development. Simple, transparent, and no hidden surprises.",
               },
               {
-                question: "What kind of support do you offer?",
+                question: "How much visibility will I have into the project?",
                 answer:
-                  "Support varies by plan. All plans include email support, with the Professional plan offering priority email support. The Enterprise plan includes 24/7 phone and email support. We also have an extensive knowledge base and community forum available to all users.",
+                  "You’ll have full visibility — always. We provide clear documentation at every step of the way, so you’ll know exactly what’s being done, when, and why. We keep you in the loop, not in the dark.",
+              },
+              {
+                question: "How long does the process take?",
+                answer:
+                  "Depending on complexity, initial demos can be ready in a few days. We'll provide a clear timeline upfront after reviewing your requirements.",
+              },
+              {
+                question: "How do you ensure the security of my data?",
+                answer:
+                  "We take your security very seriously. Our platform uses industry-standard encryption protocols (such as SSL/TLS) to protect your data during transmission. Additionally, we implement strict access controls, regular security audits, and data protection measures to keep your information safe from unauthorized access. Your privacy and security are our top priorities.",
               },
             ].map((faq, i) => (
               <motion.div
