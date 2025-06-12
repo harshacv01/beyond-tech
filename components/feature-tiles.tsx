@@ -15,48 +15,48 @@ import {
 export function FeatureTiles() {
   const features = [
     {
-      title: "Built for developers",
+      title: "Full-Stack Software Development",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
+        "Web apps, mobile apps, systems — custom-built by developers who get startups and scalability. We write clean code, optimize pages, and boost search engine visibility with SEO optimization.",
       icon: <IconTerminal2 />,
     },
     {
-      title: "Ease of use",
+      title: "AI Agent Creation",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
+        "We create intelligent AI solutions tailored to your workflows — from chatbots to autonomous tools.",
       icon: <IconEaseInOut />,
     },
     {
-      title: "Pricing like no other",
+      title: "Assignment & Academic Help",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
+        "Whether it's a tough code lab or a full research paper, we help you get it done (and understand it too).",
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
+      title: "Job Support & Task Help",
+      description: "Stuck on a job task or freelance gig? We’ll step in and get it done — with explanations if needed.",
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
+      title: "Tech Services Galore",
+      description: "Debugging, consulting, deployments, APIs, automation, tech stack migration — we’re your on-call tech partner.",
       icon: <IconRouteAltLeft />,
     },
     {
-      title: "24/7 Customer Support",
+      title: "Always-On Support",
       description:
         "We are available a 100% of the time. Atleast our AI Agents are.",
       icon: <IconHelp />,
     },
     {
-      title: "Money back guarantee",
+      title: "Premium work, friendly pricing.",
       description:
-        "If you donot like EveryAI, we will convince you to like us.",
+        "Transparent rates, no hidden fees — plus discounts for bulk services or ongoing partnerships.",
       icon: <IconAdjustmentsBolt />,
     },
     {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
+      title: "The Everything Else Dept.",
+      description: "We take on special requests too — just ask. You dream it, we’ll scope it.",
       icon: <IconHeart />,
     },
   ];

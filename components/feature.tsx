@@ -35,9 +35,7 @@ const Feature = () => {
             Everything You Need to Succeed
           </h2>
           <p className="max-w-[800px] text-muted-foreground md:text-lg">
-            Our comprehensive platform provides all the tools you need to
-            streamline your workflow, boost productivity, and achieve your
-            goals.
+            From code to careers, AI to assignments — we handle it all so you can focus on what matters: progress
           </p>
         </motion.div>
 
