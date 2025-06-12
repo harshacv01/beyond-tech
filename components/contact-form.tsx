@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
+import { AlertCircle, CheckCircle2 } from "lucide-react";
 
 type ContactFormErrors = Partial<Record<string, string[]>>;
 
@@ -14,13 +14,11 @@ export function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [errors, setErrors] = useState<ContactFormErrors>({});
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setErrors({});
     setSuccessMessage(null);
-    setIsSubmitting(true);
 
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());
@@ -34,36 +32,23 @@ export function ContactForm() {
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-      setIsSubmitting(false);
       return;
     }
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+    // Construct mailto link
+    const mailto = `mailto:beyondtechglobal@gmail.com?subject=${encodeURIComponent(
+      data.subject as string
+    )}&body=${encodeURIComponent(
+      `Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`
+    )}`;
 
-      const result = await response.json();
-
-      if (!response.ok) {
-        setErrors(result.errors || { _form: ["Something went wrong."] });
-      } else {
-        setSuccessMessage(result.message || "Message sent successfully.");
-        formRef.current?.reset();
-      }
-    } catch (err) {
-      setErrors({ _form: ["Something went wrong. Please try again later."] });
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.href = mailto;
+    setSuccessMessage("Email client opened. You can now send your message.");
+    formRef.current?.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} ref={formRef} className="space-y-6">
       <div className="space-y-4">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-2">
@@ -133,19 +118,8 @@ export function ContactForm() {
         </Alert>
       )}
 
-      <Button
-        type="submit"
-        className="w-full rounded-full"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? (
-          <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Sending...
-          </>
-        ) : (
-          "Send Message"
-        )}
+      <Button type="submit" className="w-full rounded-full">
+        Send Message
       </Button>
     </form>
   );
