@@ -31,8 +31,10 @@ const Footer = () => {
               />
             </div>
             <p className="text-sm text-muted-foreground">
-              Streamline your workflow with our all-in-one SaaS platform. Boost
-              productivity and scale your business.
+              Beyond Tech is a leading provider of innovative software solutions,
+              dedicated to helping businesses thrive in the digital age. Our
+              mission is to empower organizations with cutting-edge technology
+              and exceptional service.
             </p>
             <div className="flex gap-4">
               <Link

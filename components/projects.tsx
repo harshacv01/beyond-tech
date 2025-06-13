@@ -22,9 +22,9 @@ const item = {
 const projects = [
   {
     id: "1",
-    title: "Financial Dashboard",
+    title: "Acme Dashboard",
     description:
-      "A comprehensive financial dashboard for tracking expenses, income, and investments.",
+      "Fintech",
     technologies: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
     demoUrl: "https://dashboard-sandy-ten.vercel.app/",
     imageUrl: "/dashboard.png",
@@ -32,9 +32,9 @@ const projects = [
   },
   {
     id: "project-2",
-    title: "E-commerce Platform",
+    title: "Forever",
     description:
-      "A complete e-commerce solution with product management, cart functionality, and payment processing.",
+      "E-commerce",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
     demoUrl: "https://e-commerce-fe-ten.vercel.app/",
 
@@ -43,19 +43,19 @@ const projects = [
   },
   {
     id: "project-3",
-    title: "CMS for E-commerce",
+    title: "Forever Admin",
     description:
-      "A flexible CMS for managing products, orders, and users in an e-commerce application.",
+      "CMS",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://e-commerce-admin-one-gamma.vercel.app/",
-    imageUrl: "/cms.png",
-    category: "frontend",
+    imageUrl: "/e-commerce-cms.png",
+    category: "all",
   },
   {
     id: "project-4",
-    title: "Skill Gate Consultancy Agency",
+    title: "Skill Gate",
     description:
-      "A consultancy agency website with a focus on skills development and training.",
+      "Education",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     demoUrl: "https://skill-gate-v03.vercel.app/",
     imageUrl: "/skillgate.png",
@@ -63,25 +63,25 @@ const projects = [
   },
   {
     id: "project-5",
-    title: "Real Estate Web App",
+    title: "Right Move",
     description:
-      "A web application for browsing and managing real estate listings with advanced search features.",
+      "Real Estate",
     technologies: ["React", "HTML", "CSS", "JavaScript"],
 
     demoUrl: "https://real-estate-app-khaki-six.vercel.app/",
     imageUrl: "/real-estate.png",
-    category: "frontend",
+    category: "all",
   },
-  {
-    id: "project-6",
-    title: "E-commerce Store Backend",
-    description:
-      "A robust backend for an e-commerce store, handling product listings, user authentication, and order management.",
-    technologies: ["Node.js", "Express", "MongoDB", "Mongoose"],
-    imageUrl: "/placeholder.svg?height=400&width=600",
-    category: "backend",
-    demoUrl: "https://e-commerce-be-ashen.vercel.app/",
-  },
+  // {
+  //   id: "project-6",
+  //   title: "E-commerce Store Backend",
+  //   description:
+  //     "A robust backend for an e-commerce store, handling product listings, user authentication, and order management.",
+  //   technologies: ["Node.js", "Express", "MongoDB", "Mongoose"],
+  //   imageUrl: "/placeholder.svg?height=400&width=600",
+  //   category: "backend",
+  //   demoUrl: "https://e-commerce-be-ashen.vercel.app/",
+  // },
 ];
 
 const Projects = () => {
@@ -131,7 +131,7 @@ const Projects = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
             >
               {projects
                 .filter((project) => project.category === "all")
@@ -149,7 +149,7 @@ const Projects = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
             >
               {projects
                 .filter((project) => project.category === "fullstack")
@@ -167,7 +167,7 @@ const Projects = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
             >
               {projects
                 .filter((project) => project.category === "backend")
@@ -185,7 +185,7 @@ const Projects = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
             >
               {projects
                 .filter((project) => project.category === "frontend")

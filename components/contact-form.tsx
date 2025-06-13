@@ -43,7 +43,7 @@ export function ContactForm() {
     )}`;
 
     window.location.href = mailto;
-    setSuccessMessage("Email client opened. You can now send your message.");
+    // setSuccessMessage("Email client opened. You can now send your message.");
     formRef.current?.reset();
   };
 
@@ -118,7 +118,7 @@ export function ContactForm() {
         </Alert>
       )}
 
-      <Button type="submit" className="w-full rounded-full">
+      <Button type="submit" className="w-full rounded-full dark:bg-primary dark:text-white">
         Send Message
       </Button>
     </form>

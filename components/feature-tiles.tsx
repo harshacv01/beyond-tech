@@ -15,13 +15,13 @@ export function FeatureTiles() {
     {
       title: "Full-Stack Software Development",
       description:
-        "Web apps, mobile apps, systems — custom-built by developers who get startups and scalability. We write clean code, optimize pages, and boost search engine visibility with SEO optimization.",
+        "From web apps to mobile solutions, we build end-to-end software that meets your needs — on time and on budget.",
       icon: <IconCode />,
     },
     {
-      title: "AI Agent Creation",
+      title: "Custom AI Agents",
       description:
-        "We create intelligent AI solutions tailored to your workflows — from chatbots to autonomous tools.",
+        "Need a custom AI agent? We design and deploy intelligent bots that automate tasks, answer questions, and enhance user experiences.",
       icon: <IconRobot />,
     },
     {
@@ -32,18 +32,20 @@ export function FeatureTiles() {
     },
     {
       title: "Job Support & Task Help",
-      description: "Stuck on a job task or freelance gig? We’ll step in and get it done — with explanations if needed.",
+      description:
+        "Stuck on a job task or freelance gig? We’ll step in and get it done — with explanations if needed.",
       icon: <IconBriefcase />,
     },
     {
       title: "Tech Services Galore",
-      description: "Debugging, consulting, deployments, APIs, automation, tech stack migration — we’re your on-call tech partner.",
+      description:
+        "Debugging, consulting, deployments, APIs, automation, tech stack migration — we’re your on-call tech partner.",
       icon: <IconTools />,
     },
     {
       title: "Always-On Support",
       description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
+        "Need help fast? Our team is available 24/7 to tackle urgent issues and keep your projects moving.",
       icon: <IconClock />,
     },
     {
@@ -54,7 +56,8 @@ export function FeatureTiles() {
     },
     {
       title: "The Everything Else Dept.",
-      description: "We take on special requests too — just ask. You dream it, we’ll scope it.",
+      description:
+        "We take on special requests too — just ask. You dream it, we’ll scope it.",
       icon: <IconAdjustmentsBolt />,
     },
   ];
