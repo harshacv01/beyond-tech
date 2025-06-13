@@ -216,7 +216,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-8">
+        <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-6">
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} Beyond Tech. All rights reserved.
           </p>
