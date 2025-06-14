@@ -14,36 +14,46 @@ const TechStack = () => {
               {
                 src: "/react.svg",
                 alt: "React Logo",
+                name: "React",
               },
               {
                 src: "/node.png",
                 alt: "Node.js Logo",
+                name: "Node.js",
               },
               {
                 src: "/next.png",
                 alt: "Next.js Logo",
+                name: "Next.js",
               },
               {
                 src: "/mongodb.svg",
                 alt: "MongoDB Logo",
+                name: "MongoDB",
               },
               {
                 src: "/mysql.png",
                 alt: "MySQL Logo",
+                name: "MySQL",
               },
               {
                 src: "/redis.svg",
                 alt: "Redis Logo",
+                name: "Redis",
               },
-            ].map((image) => (
-              <Image
-                key={image.src}
-                src={image.src}
-                alt={image.alt}
-                width={120}
-                height={60}
-                className="h-8 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"
-              />
+            ].map((tech) => (
+              <div key={tech.src} className="relative group">
+                <Image
+                  src={tech.src}
+                  alt={tech.alt}
+                  width={120}
+                  height={60}
+                  className="h-11 w-auto transition-transform duration-300 hover:scale-110"
+                />
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                  {tech.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>
